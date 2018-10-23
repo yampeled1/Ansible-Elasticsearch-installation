@@ -1,0 +1,18 @@
+--- #Installation of elastic search
+- hosts: centos
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+  gather_facts: yes
+  connection: ssh
+  tasks:
+  - name: Installing Java version 1.8-openjdk
+    yum:
+      name: java-1.8.0-openjdk
+      state: present
+  - name: install the elastic search rpm from a remote repo
+    yum:
+      name: https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.7.3.noarch.rpm
+      state: present
+  - name: Make sure elastic search service is running
+    systemd: state=started name=elasticsearch.service
