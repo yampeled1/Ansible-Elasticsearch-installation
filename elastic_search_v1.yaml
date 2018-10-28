@@ -1,5 +1,5 @@
 --- #Installation of elastic search
-- hosts: centos
+- hosts: elasticsearch_install
   remote_user: ansible
   become: yes
   become_method: sudo
