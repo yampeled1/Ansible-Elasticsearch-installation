@@ -5,6 +5,11 @@ An Ansible playbook installing Elasticsearch from scratch
 - Ansible installed on master server
 - Ansible superuser privileges on target server
 
+## Execution example
+
+```
+ansible-playbook elastic_search_v1.yaml 
+```
 
 ### Output example
 
@@ -12,7 +17,7 @@ A short example of an output
 - in this case installing Elastic search from master server "yamp1" on target server "yamp2"
 
 ```
-[ansible@yamp1 playbooks]$ ansible-playbook elastic_search_v2.yaml 
+[ansible@yamp1 playbooks]$ ansible-playbook elastic_search_v1.yaml 
 [DEPRECATION WARNING]: DEFAULT_SUDO_USER option, In favor of Ansible Become, which is a generic 
 framework. See become_user. , use become instead. This feature will be removed in version 2.8. 
 Deprecation warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
